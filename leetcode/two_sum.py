@@ -24,11 +24,11 @@ class Solution:
 # indexing like i + i+1 
 # [2,11,7,15]
 #  0 1  2  3   || 0+1...0+3 then 1+2..1+3 then 2+3 
-# class Solution:
-#     def twoSum(self, nums, target) :
-#         for j in range(len(nums)): # j = 0,1,2,3,
-#             for i in range(j+1,len(nums)):  # (i is always j + 1)0+1...0+3 then 1+2..1+3 then 2+3 
-#                 if nums[j]+nums[i] == target:
-#                     return [j,i]
+class Solution:
+    def twoSum(self, nums, target) :
+        for j in range(len(nums)): # j = 0,1,2,3,
+            for i in range(j+1,len(nums)):  # (i is always j + 1)0+1...0+3 then 1+2..1+3 then 2+3 
+                if nums[j]+nums[i] == target:
+                    return [j,i]
 
 print(Solution().twoSum([2, 7, 11, 15], 9))
